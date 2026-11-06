@@ -1,0 +1,9 @@
+# Render Blueprint — lets Render set the service up automatically from this repo.
+services:
+  - type: web
+    name: card-games
+    runtime: node
+    plan: free
+    buildCommand: "true"
+    startCommand: node server.js
+    healthCheckPath: /api/health
